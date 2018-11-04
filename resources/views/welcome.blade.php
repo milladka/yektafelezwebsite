@@ -8,7 +8,6 @@
         <link href="{{ asset('css/bootstrap-grid.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap-reboot.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap-rtl.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/flickity.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
         <title>تست</title>
     </head>
@@ -112,6 +111,39 @@
             <div class="linerup"></div>
             <h2>محصولات</h2>
             <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+            <div class="tab-product container">
+
+                <ul class="nav nav-tabs">
+                        <li><a href="#varagh" class="active show"><img src="img/anvae-varagh.png" alt="varagh">ورق</a></li>
+                        <li><a href="#tirahan"><img src="img/tirahan-1.png" alt="milgerd">تیرآهن</a></li>
+                        <li><a href="#milgerd"><img src="img/milgerd.png" alt="varagh">میلگرد</a></li>
+                        <li><a href="#profil"><img src="img/profil.png" alt="varagh">لوله و پروفیل</a></li>
+                        <li><a href="#nabshi"><img src="img/nabshi.png" alt="varagh">نبشی و ناودانی</a></li>
+                        <li><a href="#saier"><img src="img/khadamat-va-tajhizat.png" alt="varagh">سایر اقلام</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="varagh" class="tab-pane fade active show">
+                            <h3>ورق</h3>
+                        </div>
+                        <div id="tirahan" class="tab-pane fade">
+                            <h3>تیرآهن</h3>
+                        </div>
+                        <div id="milgerd" class="tab-pane fade">
+                            <h3>میلگرد</h3>
+                        </div>
+                        <div id="profil" class="tab-pane fade">
+                            <h3>پروفیل</h3>
+                        </div>
+                        <div id="nabshi" class="tab-pane fade">
+                            <h3>نبشی</h3>
+                        </div>
+                        <div id="saier" class="tab-pane fade">
+                            <h3>سایر</h3>
+                        </div>
+                    </div>
+                </div>
+
         </section>
     </main>
 
@@ -121,11 +153,11 @@
 
 
     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.js"></script>
      <script type="text/javascript" src="{{ asset('js/jquery.slim.min.js') }}"></script>
      <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
      <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
      <script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
-     <script type="text/javascript" src="{{ asset('js/flickity.pkgd.min.js') }}"></script>
      <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
     </body>
 </html>
