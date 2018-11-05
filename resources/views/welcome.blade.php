@@ -1,3 +1,51 @@
+<?php
+// @package Yektafelezweb
+// Web server client in server Windows
+$client = new SoapClient('http://service.yektafelez.com/Yekta_Getinformation.asmx?wsdl');
+
+// Parameter in webserver *user* & *password*
+$param = array('username' => 'admin','password' => 'admin');
+
+// Check in and set method detile to web server
+$result  = $client->GetInformationYektaDetail($param);
+
+// Check in and set method active to web server
+$result2 = $client->GetInformationYektaActive($param);
+
+// Check array in method detile
+$outterArray  = ((array)$result);
+
+// Check array in method active
+$outterArray2 = ((array)$result2);
+
+// Check array outter in method detile web service
+$innerArray  = ((array)$outterArray['GetInformationYektaDetailResult']);
+
+// Check array outter in method active web service
+$innerArray2 = ((array)$outterArray2['GetInformationYektaActiveResult']);
+
+// Check object in list of method detile
+$dataArray  = ((array)$innerArray['listObject']);
+
+// Check object in list of method active
+$dataArray2 = ((array)$innerArray2['listObject']);
+
+//loop array in list object on detile
+foreach($dataArray as $holdingObject)
+{
+    $holdingArray = ((array)$holdingObject);
+    $title = $holdingArray['YktTitle1'];
+    $yektaabout = $holdingArray['YktAbout'];
+}
+
+// Loop array in list object on active
+foreach($dataArray2 as $holdingObject2)
+{
+    $holdingArray2 = ((array)$holdingObject2);
+    $title2 = $holdingArray2['WebActive'];
+    $titr2 = $holdingArray2['WebMessage'];
+}
+?>
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -25,7 +73,7 @@
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     focusOnSelect: true,
-                    autoplaySpeed: 4000
+                    autoplaySpeed: 3000
                 });
             });
         </script>
@@ -38,7 +86,7 @@
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     focusOnSelect: true,
-                    autoplaySpeed: 4000
+                    autoplaySpeed: 3000
                 });
             });
         </script>
@@ -51,7 +99,7 @@
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     focusOnSelect: true,
-                    autoplaySpeed: 4000
+                    autoplaySpeed: 3000
                 });
             });
         </script>
@@ -64,7 +112,7 @@
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     focusOnSelect: true,
-                    autoplaySpeed: 4000
+                    autoplaySpeed: 3000
                 });
             });
         </script>
@@ -77,7 +125,7 @@
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     focusOnSelect: true,
-                    autoplaySpeed: 4000
+                    autoplaySpeed: 3000
                 });
             });
         </script>
@@ -159,7 +207,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="title-section">
-                                    <h1>یکتا فلز خاورمیانه پیشرو در صنعت</h1>
+                                    <h1><?php echo $title?></h1>
                                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
                                     <a href="">درباره یکتافلز</a>
                                 </div>
@@ -204,18 +252,18 @@
         </section>
         {{--product section--}}
         <section class="product rtl">
-            <div class="linerup"></div>
-            <h2>محصولات</h2>
-            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+            {{--<div class="linerup"></div>--}}
+            {{--<h2>محصولات</h2>--}}
+            {{--<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>--}}
             <div class="tab-product container">
 
                 <ul class="nav nav-tabs">
-                        <li><a href="#varagh" class="active show"><img src="img/anvae-varagh.png" alt="varagh">ورق</a></li>
-                        <li><a href="#tirahan"><img src="img/tirahan-1.png" alt="milgerd">تیرآهن</a></li>
-                        <li><a href="#milgerd"><img src="img/milgerd.png" alt="varagh">میلگرد</a></li>
-                        <li><a href="#profil"><img src="img/profil.png" alt="varagh">لوله و پروفیل</a></li>
-                        <li><a href="#nabshi"><img src="img/nabshi.png" alt="varagh">نبشی و ناودانی</a></li>
-                        <li><a href="#saier"><img src="img/khadamat-va-tajhizat.png" alt="varagh">سایر اقلام</a></li>
+                        <li><a href="" class="active show"><img src="img/anvae-varagh.png" alt="varagh">ورق</a></li>
+                        <li><a href=""><img src="img/tirahan-1.png" alt="milgerd">تیرآهن</a></li>
+                        <li><a href=""><img src="img/milgerd.png" alt="varagh">میلگرد</a></li>
+                        <li><a href=""><img src="img/profil.png" alt="varagh">لوله و پروفیل</a></li>
+                        <li><a href=""><img src="img/nabshi.png" alt="varagh">نبشی و ناودانی</a></li>
+                        <li><a href=""><img src="img/khadamat-va-tajhizat.png" alt="varagh">سایر اقلام</a></li>
                     </ul>
 
                     <div class="tab-content">
@@ -225,35 +273,54 @@
                                     <div class="pro">
                                         <figure><img src="img/varagh-siyah-min.jpg" alt=""></figure>
                                         <a href="">
-                                            <div class="title-pro">گالوانیزه، هفت الماس ۲.۵ ۱۰۰۰</div>
-                                            <div class="price-pro">۱۰۰.۰۰۰ تومان</div>
+                                            <div class="title-pro">روغنی، ۱.۵، ۱۲۵۰</div>
+                                            <div class="price-pro">تماس بگیرید</div>
                                         </a>
 
                                     </div>
                                 </article>
                                 <article class="product-view">
                                     <div class="pro">
-                                        محصول ۱
+                                        <figure><img src="img/varagh-siyah-min.jpg" alt=""></figure>
+                                        <a href="">
+                                            <div class="title-pro">سیاه، ۲، ۱۰۰۰</div>
+                                            <div class="price-pro">تماس بگیرید</div>
+                                        </a>                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        <figure><img src="img/varagh-siyah-min.jpg" alt=""></figure>
+                                        <a href="">
+                                            <div class="title-pro">گالوانیزه، ۱.۲۵، ۱۰۰۰</div>
+                                            <div class="price-pro">تماس بگیرید</div>
+                                        </a>
                                     </div>
                                 </article>
                                 <article class="product-view">
                                     <div class="pro">
-                                        محصول ۱
+                                        <figure><img src="img/varagh-siyah-min.jpg" alt=""></figure>
+                                        <a href="">
+                                            <div class="title-pro">سیاه، ۲.۵، ۱۰۰۰</div>
+                                            <div class="price-pro">تماس بگیرید</div>
+                                        </a>
                                     </div>
                                 </article>
                                 <article class="product-view">
                                     <div class="pro">
-                                        محصول ۱
+                                        <figure><img src="img/varagh-siyah-min.jpg" alt=""></figure>
+                                        <a href="">
+                                            <div class="title-pro">گالوانیزه، ۱.۵، ۱۲۵۰</div>
+                                            <div class="price-pro">تماس بگیرید</div>
+                                        </a>
                                     </div>
                                 </article>
                                 <article class="product-view">
                                     <div class="pro">
-                                        محصول ۱
-                                    </div>
-                                </article>
-                                <article class="product-view">
-                                    <div class="pro">
-                                        محصول ۱
+                                        <figure><img src="img/varagh-siyah-min.jpg" alt=""></figure>
+                                        <a href="">
+                                            <div class="title-pro">گالوانیزه، ۱.۵، ۱۲۵۰</div>
+                                            <div class="price-pro">تماس بگیرید</div>
+                                        </a>
                                     </div>
                                 </article>
                             </div>
@@ -265,8 +332,8 @@
                                     <div class="pro">
                                         <figure><img src="img/varagh-siyah-min.jpg" alt=""></figure>
                                         <a href="">
-                                            <div class="title-pro">گالوانیزه، هفت الماس ۲.۵ ۱۰۰۰</div>
-                                            <div class="price-pro">۱۰۰.۰۰۰ تومان</div>
+                                            <div class="title-pro">گالوانیزه ۲.۵ ۱۰۰۰</div>
+                                            <div class="price-pro">تماس بگیرید</div>
                                         </a>
 
                                     </div>
@@ -576,7 +643,7 @@
                     <div class="licence">
                         <img src="img/samandehi.png" alt="">
                         <img src="img/enamd.png" alt="">
-                        <p>تمام حقوق برای یکتا فلز خاورمیانه محفوظ است ۱۳۹۷</p>
+                        <p></p>
                     </div>
                 </div>
             </div>
