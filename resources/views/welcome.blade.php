@@ -8,7 +8,102 @@
         <link href="{{ asset('css/bootstrap-grid.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap-reboot.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap-rtl.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/slick.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/slick-theme.css') }}" rel="stylesheet">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.js"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.slim.min.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+        <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.varagh-view').slick({
+                    autoplay : true,
+                    centerMode : true,
+                    rtl: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    focusOnSelect: true,
+                    autoplaySpeed: 4000
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.tirahan-view').slick({
+                    autoplay : true,
+                    centerMode : true,
+                    rtl: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    focusOnSelect: true,
+                    autoplaySpeed: 4000
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.milgerd-view').slick({
+                    autoplay : true,
+                    centerMode : true,
+                    rtl: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    focusOnSelect: true,
+                    autoplaySpeed: 4000
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.profil-view').slick({
+                    autoplay : true,
+                    centerMode : true,
+                    rtl: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    focusOnSelect: true,
+                    autoplaySpeed: 4000
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.nabshi-view').slick({
+                    autoplay : true,
+                    centerMode : true,
+                    rtl: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    focusOnSelect: true,
+                    autoplaySpeed: 4000
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.saier-view').slick({
+                    autoplay : true,
+                    centerMode : true,
+                    rtl: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    focusOnSelect: true,
+                    autoplaySpeed: 4000
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.posts').slick({
+                    rtl: true,
+                    dots: true,
+                    arrows: false,
+                    focusOnSelect: true
+                });
+            });
+        </script>
         <title>تست</title>
     </head>
     <body>
@@ -54,8 +149,8 @@
                     </div>
                 </nav>
     </header>
-    {{--sub header section--}}
     <main role="main">
+        {{--sub header section--}}
         <section class="subheader rtl">
             <div>
                 <div>
@@ -107,6 +202,7 @@
             </div>
             <div class="subheader-bg"></div>
         </section>
+        {{--product section--}}
         <section class="product rtl">
             <div class="linerup"></div>
             <h2>محصولات</h2>
@@ -123,41 +219,379 @@
                     </ul>
 
                     <div class="tab-content">
-                        <div id="varagh" class="tab-pane fade active show">
-                            <h3>ورق</h3>
+                        <div id="varagh" class="tab-pane active show">
+                            <div class="varagh-view">
+                                <article class="product-view">
+                                    <div class="pro">
+                                        <figure><img src="img/varagh-siyah-min.jpg" alt=""></figure>
+                                        <a href="">
+                                            <div class="title-pro">گالوانیزه، هفت الماس ۲.۵ ۱۰۰۰</div>
+                                            <div class="price-pro">۱۰۰.۰۰۰ تومان</div>
+                                        </a>
+
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                            </div>
+                            <button type="button" class="btn btn-warning btn-sm">کلیه محصولات گروه ورق</button>
                         </div>
-                        <div id="tirahan" class="tab-pane fade">
-                            <h3>تیرآهن</h3>
+                        <div id="tirahan" class="tab-pane">
+                            <div class="tirahan-view">
+                                <article class="product-view">
+                                    <div class="pro">
+                                        <figure><img src="img/varagh-siyah-min.jpg" alt=""></figure>
+                                        <a href="">
+                                            <div class="title-pro">گالوانیزه، هفت الماس ۲.۵ ۱۰۰۰</div>
+                                            <div class="price-pro">۱۰۰.۰۰۰ تومان</div>
+                                        </a>
+
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                            </div>
+                            <button type="button" class="btn btn-warning btn-sm">کلیه محصولات گروه تیرآهن</button>
                         </div>
-                        <div id="milgerd" class="tab-pane fade">
-                            <h3>میلگرد</h3>
+                        <div id="milgerd" class="tab-pane">
+                            <div class="milgerd-view">
+                                <article class="product-view">
+                                    <div class="pro">
+                                        <figure><img src="img/varagh-siyah-min.jpg" alt=""></figure>
+                                        <a href="">
+                                            <div class="title-pro">گالوانیزه، هفت الماس ۲.۵ ۱۰۰۰</div>
+                                            <div class="price-pro">۱۰۰.۰۰۰ تومان</div>
+                                        </a>
+
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                            </div>
+                            <button type="button" class="btn btn-warning btn-sm">کلیه محصولات گروه میلگرد</button>
                         </div>
-                        <div id="profil" class="tab-pane fade">
-                            <h3>پروفیل</h3>
+                        <div id="profil" class="tab-pane">
+                            <div class="profil-view">
+                                <article class="product-view">
+                                    <div class="pro">
+                                        <figure><img src="img/varagh-siyah-min.jpg" alt=""></figure>
+                                        <a href="">
+                                            <div class="title-pro">گالوانیزه، هفت الماس ۲.۵ ۱۰۰۰</div>
+                                            <div class="price-pro">۱۰۰.۰۰۰ تومان</div>
+                                        </a>
+
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                            </div>
+                            <button type="button" class="btn btn-warning btn-sm">کلیه محصولات گروه پروفیل</button>
                         </div>
-                        <div id="nabshi" class="tab-pane fade">
-                            <h3>نبشی</h3>
+                        <div id="nabshi" class="tab-pane">
+                            <div class="your-class nabshi-view">
+                                <article class="product-view">
+                                    <div class="pro">
+                                        <figure><img src="img/varagh-siyah-min.jpg" alt=""></figure>
+                                        <a href="">
+                                            <div class="title-pro">گالوانیزه، هفت الماس ۲.۵ ۱۰۰۰</div>
+                                            <div class="price-pro">۱۰۰.۰۰۰ تومان</div>
+                                        </a>
+
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                            </div>
+                            <button type="button" class="btn btn-warning btn-sm">کلیه محصولات گروه نبشی و ناودانی</button>
                         </div>
-                        <div id="saier" class="tab-pane fade">
-                            <h3>سایر</h3>
+                        <div id="saier" class="tab-pane">
+                            <div class="saier-view">
+                                <article class="product-view">
+                                    <div class="pro">
+                                        <figure><img src="img/varagh-siyah-min.jpg" alt=""></figure>
+                                        <a href="">
+                                            <div class="title-pro">گالوانیزه، هفت الماس ۲.۵ ۱۰۰۰</div>
+                                            <div class="price-pro">۱۰۰.۰۰۰ تومان</div>
+                                        </a>
+
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                                <article class="product-view">
+                                    <div class="pro">
+                                        محصول ۱
+                                    </div>
+                                </article>
+                            </div>
+                            <button type="button" class="btn btn-warning btn-sm">کلیه محصولات دیگر</button>
                         </div>
                     </div>
                 </div>
 
         </section>
+        {{--blog section--}}
+        <section class="blog rtl">
+            <div class="linerup"></div>
+            <h2>آخرین اخبار و مقالات</h2>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+            <div class="container">
+                <div class="posts">
+                    <article class="single-post">
+                        <header>یکتا فلز ۲۰ ساله شد</header>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد</p>
+                        <button type="button" class="btn btn-warning btn-sm">ادامه مطلب</button>
+                    </article>
+                    <article class="single-post">
+                        <header>یکتا فلز</header>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد</p>
+                        <button type="button" class="btn btn-warning btn-sm">ادامه مطلب</button>
+                    </article>
+                    <article class="single-post">
+                        <header>مطلب</header>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد</p>
+                        <button type="button" class="btn btn-warning btn-sm">ادامه مطلب</button>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+        {{--about section--}}
+        <section class="about rtl">
+            <div class="linerup"></div>
+            <h2>چرا یکتا فلز ؟</h2>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+            <div class="atribut container">
+                <div class="row">
+                    <div class="col-sm single-about">
+                        <div class="inner">
+                            <figure class="oneimg"><img src="img/abute-1.png" alt=""></figure>
+                            <div class="imgabout"></div>
+                            <h3>سفارش سریع</h3>
+                            <p>با هر ابزاری براحتی می توانید در یکتا فلز کالای خود را ثبت سفارش کنید </p>
+                        </div>
+                    </div>
+                    <div class="col-sm single-about">
+                        <div class="inner top">
+                          <figure class="oneimg"><img src="img/aboute-2.png" alt=""></figure>
+                            <div class="imgabout"></div>
+                            <h3>صرفه جویی در زمان و هزینه</h3>
+                            <p>با هر ابزاری براحتی می توانید در یکتا فلز کالای خود را ثبت سفارش کنید </p>
+                        </div>
+                    </div>
+                    <div class="col-sm single-about">
+                        <div class="inner">
+                            <figure class="oneimg"><img src="img/aboute-3.png" alt=""></figure>
+                            <div class="imgabout"></div>
+                            <h3>ارائه پیش فاکتور</h3>
+                            <p>با هر ابزاری براحتی می توانید در یکتا فلز کالای خود را ثبت سفارش کنید </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{--partner section--}}
+        <section class="partner rtl">
+            <div class="linerup"></div>
+            <h2>تامین کنندگان و همکاران</h2>
+            <div class="inner container">
+                <div class="row">
+                    <div class="col-sm"><img src="img/partner1.png" alt=""></div>
+                    <div class="col-sm"><img src="img/partner2.png" alt=""></div>
+                    <div class="col-sm"><img src="img/partner3.png" alt=""></div>
+                </div>
+            </div>
+        </section>
+        {{--newsletter section--}}
+        <section class="newsletter">
+            <p>آخرین اخبار و تحولات در صندوق ایمیل شما</p>
+            <form action="">
+                <label class="email-but">
+                    <input type="email" class="email" name="email" required>
+                    <img class="email-icon" src="img/mail.svg" alt="">
+                </label>
+                <button  class="btn btn-warning btn-lg" name="submit">ثبت ایمیل</button>
+            </form>
+        </section>
     </main>
+    <footer>
+        <section class="footer container rtl">
+            <div class="row">
+                <div class="col-sm about-footer">
+                    <div class="col-sm">
+                            <img src="img/logo.png" alt="">
+                            <h5>یکتافلز خاورمیانه</h5>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه </p>
+                </div>
+                </div>
+                <div class="col-sm">
+                    <ul class="contact">
+                        <li>۰۲۱<span>۷۵۲۱۴</span></li>
+                        <li><i class="icon-location"></i>پاسداران, نارنجستان چهارم</li>
+                        <li><i class="icon-mail"></i>Info@yektafelez.com</li>
+                    </ul>
+                    <ul class="social">
+                        <li><i class="icon-facebook2"></i></li>
+                        <li><i class="icon-instagram"></i></li>
+                        <li><i class="icon-telegram"></i></li>
+                        <li><i class="icon-whatsapp"></i></li>
+                        <li><i class="icon-twitter"></i></li>
+                        <li><i class="icon-linkedin2"></i></li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <div class="licence">
+                        <img src="img/samandehi.png" alt="">
+                        <img src="img/enamd.png" alt="">
+                        <p>تمام حقوق برای یکتا فلز خاورمیانه محفوظ است ۱۳۹۷</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
 
 
 
 
 
 
-    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.js"></script>
-     <script type="text/javascript" src="{{ asset('js/jquery.slim.min.js') }}"></script>
      <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
      <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
      <script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
      <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+
     </body>
 </html>
