@@ -17,7 +17,7 @@
     <script type="text/javascript" src="{{ asset('js/jquery.slim.min.js') }}"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
     <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
-    <title>تست</title>
+    <title>{{config('app.name', 'یکتافلزخاورمیانه')}}</title>
 </head>
 <body>
 <header class="fixed-top">
