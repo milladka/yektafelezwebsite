@@ -16,9 +16,13 @@
 
 Route::get('/', 'PagesController@index' );
 
-//Route::get('/varagh/{id}', 'PagesController@varagh','$id' );
+Route::get('/product/{id}', 'PagesController@product' );
+
+Route::get('/about-us', 'PagesController@aboutus' );
+
+Route::get('/contact-us', 'PagesController@contactus' );
 
 
-Route::get('/product/{id_group}' , function ($id_group) {
-    return 'this is  '  .$id_group;
-});
+//Route::get('/product}' , function ($id_group) {
+//    return 'this is  '  .$id_group;
+//});

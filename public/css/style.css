@@ -710,7 +710,61 @@ footer{
     padding: 1rem;
     color: #595959;
 }
+.wrap-page-gray{
+    background-color: #f8f9fb;
+    padding: 70px 0;
+    text-align: right;
+    direction: rtl;
 
+}
+.wrap-page-gray h2{
+    line-height: 1.7;
+    color: #030739;
+    margin-bottom: 50px;
+}
+.wrap-page-gray p{
+    line-height: 2;
+}
+.wrap-page-lite{
+    background-color: #f4f3f9;
+    padding: 70px 0;
+}
+.wrap-page-lite h3{
+    line-height: 1.5;
+    color: #030739;
+}
+.wrap-page-lite p{
+    line-height: 2;
+}
+.wrap-page-lite .card-header{
+    background-color: rgb(248, 249, 251);
+    border-bottom: 0;
+}
+.wrap-page-lite .btn-link{
+    color: #081070;
+    width: 100%;
+    text-align: right;
+}.wrap-page-lite .btn-link:hover{
+     text-decoration: none;
+     color: #606060;
+    transition: 0.5s all ease;
+ }
+ .box-contact{
+     border-bottom: 1px solid #e6e6f7;
+ }
+ .box-contact h4{
+     font-weight: 700;
+     color: #081070;
+     margin-bottom: 1rem;
+ }
+ .box-contact ul{
+     list-style: none;
+ }
+ .box-contact li{
+     display: inline-block;
+     padding: 0.7rem;
+     font-size: 1.5rem;
+ }
 /**
   MEDIA QUERIES
 */
