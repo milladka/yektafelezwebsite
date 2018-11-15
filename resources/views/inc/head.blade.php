@@ -18,6 +18,7 @@
     <link href="{{ asset('css/slick.css') }}" rel="stylesheet">
     <link href="{{ asset('css/slick-theme.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    @yield('style')
     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.js"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.slim.min.js') }}"></script>

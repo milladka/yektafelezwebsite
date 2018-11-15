@@ -18,8 +18,8 @@
 @section('subheader')
     @parent
     <div class="row">
-        <div class="col-lg-6">
-            <div class="title-section">
+        <div class="col-lg-6 col-xs-12">
+            <div class="title-section my-lg-5 py-lg-5 my-5 px-lg-5">
                 <h1>شرکت یکتافلز</h1>
                 <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                     گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="section-from">
+            <div class="section-from my-lg-3 d-none d-sm-block">
                 <div class="title-form">ورود به پنل کاربری</div>
                 <p>جهت ورود به پنل کاربری نام کاربری و رمز عبور را وارد کنید</p>
                 <form action="">

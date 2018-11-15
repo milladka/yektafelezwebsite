@@ -246,53 +246,24 @@ body{
         opacity: 1;
     }
 }
-
   /*subherader*/
-
 .subheader .content{
     padding: 0 10rem;
     width: 100%;
     height: 25rem;
-    /*margin-top: 9rem;*/
     background-color: #2e39bf;
-    /*background: url("../img/bg-section.jpg");*/
     filter: blur(1px) brightness(60%) contrast(120%);
-    /*background-size: cover;*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: bottom center;*/
 }
 .subheader {
-    position: relative;
     margin-top: 5.4rem;
+    background-color: #081070;
 }
-.subheader::after {
-    position: absolute;
-    /*content: '';*/
-    width: 100%;
-    height: 112px;
-    left: 0;
-    bottom: -2px;
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 79%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(79%, rgba(0, 0, 0, 0.8)));
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 100%);
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 100%);
-    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 100%);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
-}
+
 .text-item{
-    position: absolute;
     color: #ffffff;
-    width: 100%;
-    top:1rem;
 }
 .subheader .row{
     margin: 0;
-}
-.title-section{
-    margin-right: 10rem;
-    margin-top: 7rem;
 }
 .title-section h1{
     font-weight: bold;
@@ -765,6 +736,92 @@ footer{
      padding: 0.7rem;
      font-size: 1.5rem;
  }
+.phone-number {
+    font-size: 1.3rem;
+}
+.box-contact a:hover, .phone-number a:hover{
+    text-decoration: none;
+}
+.box-contact i{
+    color: #033e76;
+    transition: all 0.2s ease;
+}
+.box-contact i:hover{
+    color: #086ecf;
+}
+.tab-contact .tab-content::before ,.tab-contact .tab-content::after{
+    display: none;
+}
+.tab-contact .nav-tabs li {
+    margin: 0 0.1rem;
+    border-bottom: none;
+    transition: 0.2s all ease;
+    background: #f0f0f1;
+    padding: 1rem 3rem;
+    border-radius: 1rem 1rem 0 0;
+    cursor: pointer;
+}
+.tab-contact .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #081070;
+    border-color: #f0f0f1;
+}
+.nav-link.active .nav-item{
+    background-color: #081070;
+}
+
+
+.tab {
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    border-left: 0 !important;
+    border-bottom: 0 !important;
+    margin: 0 1px 0 1px !important;
+    padding: 1rem 4rem !important;
+    line-height: 28px !important;
+    white-space: nowrap !important;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border: none;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #081070;
+    color: #fff;
+    -webkit-box-shadow: 0 5px 5px 0 rgba(50,50,50,.15);
+    -moz-box-shadow: 0 5px 5px 0 rgba(50,50,50,.15);
+    box-shadow: 0 5px 5px 0 rgba(50,50,50,.15);
+}
+
+/* Style the tab content */
+.tabcontents {
+    display: none;
+    padding: 3.5rem 2rem;
+    border-top: none;
+    background: #fff;
+}
+.tab-contact  .form-control {
+    padding: 0.8rem;
+    margin: 0.2rem 0;
+    border: 1px solid #e1e1e1;
+}
+.tab-contact .btn{
+    background-color:#09ebaf;
+}
+
 /**
   MEDIA QUERIES
 */

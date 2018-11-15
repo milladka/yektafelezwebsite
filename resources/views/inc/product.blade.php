@@ -6,12 +6,12 @@
     <div class="tab-product container">
 
         <ul class="nav nav-tabs">
-            <li><a href="" class="active show"><img src="{{ asset('img/anvae-varagh.png')}}" alt="varagh">ورق</a></li>
-            <li><a href=""><img src="{{ asset('img/tirahan-1.png')}}" alt="milgerd">تیرآهن</a></li>
-            <li><a href=""><img src="{{ asset('img/milgerd.png')}}" alt="varagh">میلگرد</a></li>
-            <li><a href=""><img src="{{ asset('img/profil.png')}}" alt="varagh">لوله و پروفیل</a></li>
-            <li><a href=""><img src="{{ asset('img/nabshi.png')}}" alt="varagh">نبشی و ناودانی</a></li>
-            <li><a href=""><img src="{{ asset('img/khadamat-va-tajhizat.png')}}" alt="varagh">سایر اقلام</a></li>
+            <li><button onclick="openpro(event, 'varagh')"  class="tablinkss active show"><img src="{{ asset('img/anvae-varagh.png')}}" alt="varagh">ورق</button></li>
+            <li><button onclick="openpro(event, 'tirahan')" class="tablinkss"><img src="{{ asset('img/tirahan-1.png')}}" alt="milgerd">تیرآهن</button></li>
+            <li><button onclick="openpro(event, 'milgerd')" class="tablinkss"><img src="{{ asset('img/milgerd.png')}}" alt="varagh">میلگرد</button></li>
+            <li><button onclick="openpro(event, 'profil')"  class="tablinkss"><img src="{{ asset('img/profil.png')}}" alt="varagh">لوله و پروفیل</button></li>
+            <li><button onclick="openpro(event, 'nabshi')"  class="tablinkss"><img src="{{ asset('img/nabshi.png')}}" alt="varagh">نبشی و ناودانی</button></li>
+            <li><button onclick="openpro(event, 'saier')"   class="tablinkss"><img src="{{ asset('img/khadamat-va-tajhizat.png')}}" alt="varagh">سایر اقلام</button></li>
         </ul>
 
         <div class="tab-content">
