@@ -363,40 +363,36 @@ body{
     border-bottom: 0;
 }
 .nav-tabs li{
-    padding: 0.3rem 1rem 0 1rem;
-    margin: 0 1rem;
-    border-bottom: 2px solid #8c8b8b;
+    padding: 0.2rem 1rem 0 1rem;
+    margin: 0 0.5rem;
+    border-bottom: 1px solid #8c8b8b;
     transition: 0.2s all ease;
 }
 .nav-tabs li.active{
-    border-bottom: 2px solid #033e76;
+    border-bottom: 1px solid #033e76;
 }
-.nav-tabs li a{
-    color: #033e76;
-    transition: 0.5s all ease;
-
+.tablinkss.active {
+    color: #081070;
 }
 .nav-tabs li a.show{
     color: #b21f2d;
 }
-.nav-tabs li a.show:hover{
-    color: #033e76;
-}
-.nav-tabs li a:hover{
-    text-decoration: none;
-    color:#033e76
-}
-.nav-tabs li a img{
+.nav-tabs li img{
     display: inline-block;
     padding: 0.3rem 0rem 0.3rem 0.5rem;
 }
+.tablinkss {
+    border: 0;
+    background: none;
+    padding: 0.5rem;
+    color: #99999b;
+}
 .nav-tabs li:hover{
-    border-bottom: 2px solid #033e76;
+    border-bottom: 1px solid #033e76;
 }
 .tab-content{
-    height: 20rem;
-    margin: 2rem;
     position: relative;
+    overflow: hidden;
 }
 .tab-product{
     position: relative;
@@ -511,6 +507,7 @@ body{
 }
 .posts{
     padding: 2.5rem 0;
+    overflow: hidden;
 }
 .slick-dots li button {
     background: white;
@@ -821,7 +818,46 @@ footer{
 .tab-contact .btn{
     background-color:#09ebaf;
 }
-
+.owl-item{
+    display: inline-block;
+}
+.owl-theme .owl-nav [class*="owl-"] {
+    color: #2E39BF;
+    font-size: 14px;
+    margin: 5px;
+    background: #fff;
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+}
+.owl-dots{
+    display: none;
+}
+.pro figure{
+    margin: 0 0 1rem;
+    height: 80%;
+    width: inherit;
+}
+.pro img{
+    vertical-align: middle;
+    border-style: none;
+    height: 100%;
+    width: 100%;
+}
+.posts .owl-nav [class*="owl-"]{
+    border: 0;
+    padding: 0.6rem;
+    background: none;
+    color: #ffc107;
+    cursor: pointer;
+    margin: 0.2rem;
+    font-size: 1.2rem;
+}
+.owl-nav{
+    text-align: center;
+}
 /**
   MEDIA QUERIES
 */

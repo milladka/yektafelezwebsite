@@ -15,16 +15,40 @@
     صفحه اصلی
 @endsection
 
+<?php
+// @package Yektafelezweb
+// Web server client in server Windows
+$client = new SoapClient('http://192.168.30.122/Yekta_Getinformation.asmx?wsdl');
+
+// Parameter in webserver *user* & *password*
+$param = array('username' => 'admin','password' => 'admin');
+
+// Check in and set method detile to web server
+$result  = $client->GetInformationTitle($param);
+// Check in and set method active to web server
+// Check array in method detile
+$outterArray  = ((array)$result);
+// Check array outter in method detile web service
+$innerArray  = ((array)$outterArray['GetInformationTitleResult']);
+
+// Check object in list of method detile
+$dataArray  = ((array)$innerArray['listObject']);
+//loop array in list object on detile
+foreach($dataArray as $holdingObject)
+{
+    $holdingArray = ((array)$holdingObject);
+    $title = $holdingArray['WebTitle'];
+    $yektaabout = $holdingArray['WebSubTitle'];
+}
+?>
+
 @section('subheader')
     @parent
     <div class="row">
         <div class="col-lg-6 col-xs-12">
             <div class="title-section my-lg-5 py-lg-5 my-5 px-lg-5">
-                <h1>شرکت یکتافلز</h1>
-                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                    گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
-                    برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
-                    می باشد. </p>
+                <h1><?php echo $title ?></h1>
+                <p><?php echo $yektaabout ?></p>
                 <a href="">درباره یکتافلز</a>
             </div>
         </div>

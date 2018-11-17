@@ -15,15 +15,10 @@
     <link href="{{ asset('css/bootstrap-grid.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-reboot.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-rtl.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/slick.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/slick-theme.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     @yield('style')
-    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.js"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.slim.min.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
-    <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
     <title>{{config('app.name', 'یکتافلزخاورمیانه')}} | @yield('title')</title>
 </head>
 <body>

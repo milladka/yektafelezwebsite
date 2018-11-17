@@ -1,7 +1,37 @@
 <header class="fixed-top">
-    <div class="alert-web current col-12">
-        تست
-        <i class="icon-cross"></i>
+    <?php
+    // @package Yektafelezweb
+    // Web server client in server Windows
+    $client = new SoapClient('http://192.168.30.122/Yekta_Getinformation.asmx?wsdl');
+
+    // Parameter in webserver *user* & *password*
+    $param = array('username' => 'admin','password' => 'admin');
+
+    // Check in and set method detile to web server
+    $result  = $client->GetInformationShowWarning($param);
+    // Check in and set method active to web server
+    // Check array in method detile
+    $outterArray  = ((array)$result);
+    // Check array outter in method detile web service
+    $innerArray  = ((array)$outterArray['GetInformationShowWarningResult']);
+
+    // Check object in list of method detile
+    $dataArray  = ((array)$innerArray['listObject']);
+    //loop array in list object on detile
+    foreach($dataArray as $holdingObject)
+    {
+        $holdingArray = ((array)$holdingObject);
+        $showwarning = $holdingArray['WebShowWarning'];
+        $WebShowMessage = $holdingArray['WebShowMessage'];
+    }
+    ?>
+    <div class="alert-web current col-12" style="<?php
+    if( $showwarning === true ){
+        echo 'display:block;';
+    }else{
+        echo 'display:none;';
+        }
+        ?>"><?php echo $WebShowMessage ?><i class="icon-cross"></i>
     </div>
     <nav class="navbar navbar-expand-md navbar-dark rtl">
         <a class="navbar-brand" href="#"><img src="{{ asset('img/logo.png')}}" alt="یکتافلزخاورمیانه - yektafelez khavarmianeh"></a>

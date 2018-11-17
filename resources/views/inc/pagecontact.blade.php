@@ -73,7 +73,7 @@
                     <form>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control" id="inputEmail4" placeholder="نام و نام خانوادگی">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="1نام و نام خانوادگی">
                             </div>
                             <div class="form-group col-md-6">
                                 <input type="text" class="form-control" id="inputPassword4" placeholder="شماره تلفن">
@@ -101,7 +101,7 @@
                     <form>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control" id="inputEmail4" placeholder="نام و نام خانوادگی">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="نام و نام خانوادگی2">
                             </div>
                             <div class="form-group col-md-6">
                                 <input type="text" class="form-control" id="inputPassword4" placeholder="شماره تلفن">
